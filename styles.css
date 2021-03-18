@@ -1,6 +1,14 @@
+
 :root {
     --menu-bar-width: 60px;
     --menu-bar-height: 10px;
+}
+
+#container {
+    /*border: 1px solid blue;*/
+    padding: 20px;
+    height: 10px;
+    width: 40px;
 }
 
 #menu {
@@ -8,7 +16,6 @@
     position: relative;
     width: var(--menu-bar-width);
     height: var(--menu-bar-height);
-    margin: 100px;
 }
 
 #menu::before,
@@ -31,3 +38,24 @@
     top: 20px;
 }
 
+#menu:hover {
+    background: none;
+}
+
+#container:hover {
+    background:transparent;
+}
+
+#menu:hover::before {
+    opacity: 100%;
+    transform: rotate(45deg);
+    transition-duration: 0.8s;
+    top: 0;
+}
+
+#menu:hover::after {
+    opacity: 100%;
+    transform: rotate(-45deg);
+    transition-duration: 0.8s;
+    top: 0;
+}
